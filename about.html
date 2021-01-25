@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 width=device-width, initial-scale=1, user-scalable=0">
+    <title>О компании</title>
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    	<!-- POPUP-CALLBACK -->
+	<div class="popup">
+		<button class="popup-close"></button>
+        <div class="block-one">
+            <h2 class="block-one__title">Заказать обратный звонок</h2>
+            <p class="block-one__text">
+                Наш менеджер перезвонит вам в течение 5 минут
+            </p>
+            <form class="ctc-us__form" action="" >
+                <input class="ctc-us__input name" type="text" form="quiz-form" placeholder="Имя">
+                <input class="ctc-us__input phone" type="text" form="quiz-form" placeholder="+7(___)-___-__-__">
+                <input class="ctc-us__checkbox" id="popup-rules" type="checkbox" checked>
+                <label class="ctc-us__label" for="popup-rules">Даю согласие на <span>обработку персональных
+                        данных.</span></label>
+                <input class="ctc-us__btn" id="popup-send" type="button" value="Отправить">
+            </form>
+        </div>
+        <div class="block-two">
+            <h2 class="block-two__title">
+                Спасибо, что обратились к нам!
+            </h2>
+        </div>
+	</div>
+	<!-- POPUP-CALLBACK -->
+    	<!-- QUIZ-POPUP -->
+        <div class="quiz">
+            <button class="popup-close"></button>
+            <form class="quiz-form" id="quiz-form" action="">
+                <p class="quiz__text">
+                    Ответьте на пару вопросов, и мы онлайн рассчитаем стоимость ТПЭ под ваши нужды.
+                </p>
+                <div class="quiz__status-bar"><span></span></div>
+                <div class="quiz-bone">
+                    <h2 class="quiz__title">Какие детали вы производите?</h2>
+                    <textarea class="quiz-bone__textarea" name="" id="QuizAreaOne" form="quiz-form" placeholder="Название и описание"></textarea>
+                    <button class="quiz__btn-next"  type="button">Далее</button>
+                </div>
+                <div class="quiz-btwo">
+                    <h2 class="quiz__title">Какой материал вы используете в данный момент?</h2>
+                    <textarea class="quiz-bone__textarea" name="" id="" form="quiz-form" placeholder="Название"></textarea>
+                    <button class="quiz__btn-back"  type="button">Назад</button>
+                    <button class="quiz__btn-next"  type="button">Далее</button>
+                </div>
+                <div class="quiz-bthree">
+                    <h2 class="quiz__title">Почему вам необходим новый материал?</h2>
+                    <p class="quiz__subtitle">(Что вас не устраивает в эксплуатируемом материале?)</p>
+                    <textarea  class="quiz-bone__textarea" name="" id="" form="quiz-form" placeholder="Что не устраивает"></textarea>
+                    <button class="quiz__btn-back"  type="button">Назад</button>
+                    <button class="quiz__btn-next"  type="button">Далее</button>
+                </div>
+                <div class="quiz-bfour">
+                    <h2 class="quiz__title">Опишите требования к новому материалу.</h2>
+                    <p class="quiz__subtitle">(Физические, механические.)</p>
+                    <textarea class="quiz-bone__textarea" name="" id="" form="quiz-form" placeholder="Требования"></textarea>
+                    <button class="quiz__btn-back" type="button">Назад</button>
+                    <button class="quiz__btn-next"  type="button">Далее</button>
+                </div>
+                <div class="quiz-bfive">
+                    <h2 class="quiz__title">Объем и сроки поставок</h2>
+                    <textarea  class="quiz-bone__textarea" name="" id="" form="quiz-form" placeholder="Объем и сроки"></textarea>
+                    <button class="quiz__btn-back"  type="button">Назад</button>
+                    <button class="quiz__btn-next"  type="button">Далее</button>
+                </div>
+                <div class="quiz-bsix">
+                    <h2 class="quiz__title">Обратная связь</h2>
+                    <input class="ctc-us__input name" type="text" form="quiz-form" placeholder="Имя">
+                    <input class="ctc-us__input phone" type="text" form="quiz-form" placeholder="+7(___)-___-__-__">
+                    <input class="ctc-us__checkbox" id="quiz-rules" type="checkbox" form="quiz-form" checked>
+                    <label class="ctc-us__label" for="quiz-rules" form="quiz-form">Даю согласие на <span>обработку персональных
+                            данных.</span></label>
+                    <button class="quiz__btn-back"  type="button">Назад</button>
+                    <input class="quiz__btn-send" type="button" value="Отправить" form="quiz-form">
+                </div>
+            </form>
+        </div>
+        <div class="quiz-final">
+            <h2 class="quiz__title">Спасибо!</h2>
+            <p class="quiz__subtitle">Наш менеджер подготовит индивидуальное предложение и позвонит вам</p>
+        </div>
+    <div class="quiz-mask"></div>
+    <!-- QUIZ-POPUP -->
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <a class="logo__link" href="index.html">
+                    <img class="logo__img" src="images/logo.png" alt="Depsol Polymers logo">
+                </a>
+                <button class="burger-btn">
+				</button>
+                <div class="header__menu-wrapper">
+					<nav class="header__menu">
+						<ul class="header__menu-list">
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="about.html">О нас</a>
+							</li>
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="use.html">Применение</a>
+							</li>
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="news.html">Новости</a>
+							</li>
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="documentation.html">Документация</a>
+							</li>
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="contacts.html">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+                    <ul class="header__polymer-list">
+                        <li class="header__polymer-item">
+                            <a class="header__polymer-link" href="products.html">SBS-TPE</a>
+                        </li>
+                        <li class="header__polymer-item">
+                            <a class="header__polymer-link" href="products.html">SEBS-TPE</a>
+                        </li>
+                        <li class="header__polymer-item">
+                            <a class="header__polymer-link" href="products.html">TPV</a>
+                        </li>
+                        <li class="header__polymer-item">
+                            <a class="header__polymer-link" href="products.html">TPU</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__phone-wrapper">
+                    <a class="header__phone" href="tel:81234567890">8 (123) 456-78-90</a>
+                    <button class="header__btn">Подобрать полимер</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="about-bone">
+            <div class="container">
+                <div class="about-bone__wrapper">
+                    <h1 class="about-bone__title">О компании Depsol Polymers</h1>
+                    <p class="about-bone__text">Проснувшись однажды утром после беспокойного сна, Грегор Замза
+                        обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой
+                        спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный
+                        дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно
+                        сползти одеяло. Его многочисленные, убого тонкие по сравнению с остальным телом ножки беспомощно
+                        копошились у него перед глазами.</p>
+                </div>
+            </div>
+        </section>
+        <section class="about-btwo">
+            <div class="container">
+                <h2 class="about-btwo__title">Команда профессионалов</h2>
+                <div class="about-btwo__slider">
+                    <div class="about-btwo__card">
+                        <img class="about-btwo__card-img" src="images/about-profi.png" alt="">
+                        <span class="about-btwo__card-name">Андрей Иванов</span>
+                        <span class="about-btwo__card-position">Менеджер</span>
+                    </div>
+                    <div class="about-btwo__card">
+                        <img class="about-btwo__card-img" src="images/about-profi.png" alt="">
+                        <span class="about-btwo__card-name">Андрей Иванов</span>
+                        <span class="about-btwo__card-position">Менеджер</span>
+                    </div>
+                    <div class="about-btwo__card">
+                        <img class="about-btwo__card-img" src="images/about-profi.png" alt="">
+                        <span class="about-btwo__card-name">Андрей Иванов</span>
+                        <span class="about-btwo__card-position">Менеджер</span>
+                    </div>
+                    <div class="about-btwo__card">
+                        <img class="about-btwo__card-img" src="images/about-profi.png" alt="">
+                        <span class="about-btwo__card-name">Андрей Иванов</span>
+                        <span class="about-btwo__card-position">Менеджер</span>
+                    </div>
+                    <div class="about-btwo__card">
+                        <img class="about-btwo__card-img" src="images/about-profi.png" alt="">
+                        <span class="about-btwo__card-name">Андрей Иванов</span>
+                        <span class="about-btwo__card-position">Менеджер</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-bthree">
+            <div class="container">
+                <div class="about-bthree__wrapper">
+                    <h2 class="about-bthree__title">История компании</h2>
+                    <ul class="about-bthree__list">
+                        <li class="about-bthree__item">
+                            <span class="about-bthree__date">2017</span>
+                            <p class="about-bthree__text">Проснувшись однажды утром после беспокойного сна, Грегор Замза
+                                обнаружил, что он у себя в постели превратился в страшное насекомое.</p>
+                        </li>
+                        <li class="about-bthree__item">
+                            <span class="about-bthree__date">2019</span>
+                            <p class="about-bthree__text">Проснувшись однажды утром после беспокойного сна, Грегор Замза
+                                обнаружил, что он у себя в постели превратился в страшное насекомое.</p>
+                        </li>
+                        <li class="about-bthree__item">
+                            <span class="about-bthree__date">2020</span>
+                            <p class="about-bthree__text">Проснувшись однажды утром после беспокойного сна, Грегор Замза
+                                обнаружил, что он у себя в постели превратился в страшное насекомое.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="about-bfour">
+            <div class="container">
+                <h2 class="about-bfour__title">Наша миссия</h2>
+                <p class="about-bfour__text">
+                    Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели
+                    превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять
+                    голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого
+                    еле держалось готовое вот-вот окончательно сползти одеяло. Его многочисленные, убого тонкие по
+                    сравнению с остальным телом ножки беспомощно копошились у него перед глазами.
+                </p>
+            </div>
+        </section>
+    </main>
+    <section class="about-five">
+        <div class="index-bfive__wrapper">
+            <div class="index-bfive__row-1">
+                <div class="index-bfive__content">
+                    <p class="index-bfive__text dedicated">Разработаем рецептуру и технологию</p>
+                    <p class="index-bfive__text">под ваши задачи. Проконсультируем на всех этапах.</p>
+                </div>
+                <img class="index-bfive__img" src="images/index-offer-1.png" alt="">
+            </div>
+            <div class="index-bfive__row-2">
+                <div class="index-bfive__content">
+                    <p class="index-bfive__text 
+                        dedicated">Отправим образец</p>
+                    <p class="index-bfive__text">в вашу лабораторию.</p>
+                </div>
+                <img class="index-bfive__img" src="images/index-offer-2.png" alt="">
+            </div>
+            <div class="index-bfive__row-3">
+                <div class="index-bfive__content">
+                    <p class="index-bfive__text">Обеспечим безопасные</p>
+                    <p class="index-bfive__text dedicated">мультимодальные перевозки</p>
+                </div>
+                <img class="index-bfive__img" src="images/index-offer-3.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="about-bsix">
+        <div class="about-bsix__wrapper">
+            <ul class="about-bsix__list">
+                <li class="about-bsix__item">
+                    <div class="about-bsix__item-circle">
+                        <svg class="svg">
+                            <circle cx="70" cy="70" r="71.5"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <span class="about-bsix__count">28</span>
+                    </div>
+                    <p class="about-bsix__text">компаний сотрудничает с нами на постоянной основе</p>
+                </li>
+                <li class="about-bsix__item">
+                    <div class="about-bsix__item-circle">
+                        <svg class="svg">
+                            <circle cx="70" cy="70" r="71.5"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <span class="about-bsix__count">1000</span>
+                    </div>
+                    <p class="about-bsix__text">кг полимеров мы отправляем ежедневно</p>
+                </li>
+                <li class="about-bsix__item">
+                    <div class="about-bsix__item-circle">
+                        <svg class="svg">
+                            <circle cx="70" cy="70" r="71.5"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <span class="about-bsix__count">15</span>
+                    </div>
+                    <p class="about-bsix__text">технических экспертов работает в компании</p>
+                </li>
+                <li class="about-bsix__item">
+                    <div class="about-bsix__item-circle">
+                        <svg class="svg">
+                            <circle cx="70" cy="70" r="71.5"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <span class="about-bsix__count">3</span>
+                    </div>
+                    <p class="about-bsix__text">место в отрасли по удобству обслуживания</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="about-bseven">
+        <div class="container">
+            <div class="ctc-us__wrapper">
+                <h3 class="ctc-us__title">Связаться с нами</h3>
+                <p class="ctc-us__text">На портрете была изображена дама в меховой шляпе и боа, она сидела
+                    очень прямо и протягивала зрителю тяжелую меховую муфту.</p>
+                <form class="ctc-us__form" action="" id="contact-form">
+                    <input class="ctc-us__input name" type="text" placeholder="Имя" form="contact-form">
+                    <input class="ctc-us__input phone" type="text" placeholder="+7(___)-___-__-__" form="contact-form">
+                    <input class="ctc-us__btn" type="button" value="Отправить" form="contact-form">
+                    <input class="ctc-us__checkbox" id="rules" type="checkbox" checked form="contact-form">
+                    <label class="ctc-us__label" for="rules">Даю согласие на <a href="#">обработку персональных
+                        данных.</a></label>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div class="scroll-up" id="scroll-up"></div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <a class="logo__link" href="#">
+                    <img class="logo__img" src="images/logo-footer.png" alt="Depsol Polymers logo">
+                </a>
+                <div class="footer__phone-wrapper">
+                    <a class="footer__phone" href="tel:81234567890">8 (123) 456-78-90</a>
+                    <button class="footer__btn">Обратный звонок</button>
+                    <a class="footer__email" href="mailto:info@depsol.ru">info@depsol.ru</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span class="footer__copyrigh">© depsol.ru 2020</span>
+                <a class="footer__link" href="#">Согласие на обработку ПД</a>
+                <a class="footer__link" href="#">Политика обработки ПД</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

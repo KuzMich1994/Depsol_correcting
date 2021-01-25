@@ -1,0 +1,413 @@
+// @import "fonts";
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  src: url("../fonts/montserrat/Montserrat-Light.woff2") format("woff2"),
+    url("../fonts/montserrat/Montserrat-Light.woff") format("woff"),
+    url("../fonts/montserrat/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  src: url("../fonts/montserrat/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/montserrat/Montserrat-Regular.woff") format("woff"),
+    url("../fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  src: url("../fonts/montserrat/Montserrat-Medium.woff2") format("woff2"),
+    url("../fonts/montserrat/Montserrat-Medium.woff") format("woff"),
+    url("../fonts/montserrat/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  src: url("../fonts/montserrat/Montserrat-SemiBold.woff2") format("woff2"),
+    url("../fonts/montserrat/Montserrat-SemiBold.woff") format("woff"),
+    url("../fonts/montserrat/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  src: url("../fonts/montserrat/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/montserrat/Montserrat-Bold.woff") format("woff"),
+    url("../fonts/montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Exo", sans-serif;
+  src: url("../fonts/Exo/Exo-SemiBold.woff2") format("woff2"),
+    url("../fonts/Exo/Exo-SemiBold.woff") format("woff"),
+    url("../fonts/Exo/Exo-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo 2", sans-serif;
+  src: url("../fonts/Exo2/Exo2-Regular.woff2") format("woff2"),
+    url("../fonts/Exo2/Exo2-Regular.woff") format("woff"),
+    url("../fonts/Exo2/Exo2-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ubuntu", sans-serif;
+  src: url("../fonts/Ubuntu/Ubuntu-Medium.woff2") format("woff2"),
+    url("../fonts/Ubuntu/Ubuntu-Medium.woff") format("woff"),
+    url("../fonts/Ubuntu/Ubuntu-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import "use";
+@import "news";
+@import "index";
+@import "about";
+@import "header";
+@import "footer";
+@import "article";
+@import "products";
+@import "contacts";
+@import "popup";
+@import "documentation";
+
+html {
+  box-sizing: border-box;
+  height: auto;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+input {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+body{
+  overflow-x: hidden;
+  height: 100%;
+}
+body.active {
+  position: sticky;
+  overflow: hidden;
+  height: 150vh;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+button {
+  border: none;
+}
+.main {
+  background: #f4f4f4;
+}
+.container {
+  max-width: 1190px;
+  width: 100%;
+  margin: 0 auto;
+}
+.block {
+  display: block;
+}
+.mobile{
+  display: none;
+}
+.scroll-hidden {
+  overflow: hidden;
+}
+//Slick-Slider arrows
+.slick-initialized.slick-slider .slick-prev.slick-arrow,
+.slick-initialized.slick-slider .slick-next.slick-arrow {
+  position: absolute;
+  width: 35px;
+  height: 39px;
+  font-size: 0;
+  line-height: 0;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg width='35' height='39' viewBox='0 0 35 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.02389 4.26624C-0.204789 2.99731 0.694399 0.875 2.46071 0.875H16.5383C17.0799 0.875 17.5983 1.09466 17.9751 1.48376L34.1328 18.1708C34.8837 18.9463 34.8837 20.1778 34.1328 20.9533L17.9751 37.6404C17.5983 38.0295 17.0799 38.2491 16.5383 38.2491H2.46071C0.694402 38.2491 -0.204792 36.1268 1.02389 34.8579L14.4874 20.9533C15.2383 20.1778 15.2383 18.9463 14.4874 18.1708L1.02389 4.26624Z' fill='%23BFBFBF'/%3E%3C/svg%3E%0A");
+  z-index: 10;
+  outline: none;
+  z-index: 5;
+}
+.index-bthree__slider.slick-initialized.slick-slider .slick-prev.slick-arrow {
+  transform: rotate(180deg);
+  top: 3%;
+  left: 23.15%;
+}
+.index-bthree__slider.slick-initialized.slick-slider .slick-next.slick-arrow {
+  top: 3%;
+  left: 29.15%;
+}
+.index-bfour__slider.slick-initialized.slick-slider .slick-prev.slick-arrow {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+}
+.index-bfour__slider.slick-initialized.slick-slider .slick-next.slick-arrow {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.use__slider.slick-initialized.slick-slider .slick-prev.slick-arrow {
+  left: 9.3%;
+  top: 8.2%;
+  transform: rotate(180deg);
+}
+.use__slider.slick-initialized.slick-slider .slick-next.slick-arrow {
+  left: 18.4%;
+  top: 8.2%;
+}
+.about-btwo__slider.slick-initialized.slick-slider .slick-prev.slick-arrow {
+  left: 17px;
+  top: 23px;
+  transform: rotate(180deg);
+}
+.about-btwo__slider.slick-initialized.slick-slider .slick-next.slick-arrow {
+  left: 127px;
+  top: 23px;
+}
+//Slick-Slider arrows
+
+//ctc-form start
+.ctc-us__wrapper {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 7px;
+}
+.ctc-us__title {
+  margin-bottom: 5px;
+  font-family: "Exo 2", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 46px;
+  line-height: 55px;
+}
+.ctc-us__text {
+  max-width: 570px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 130.9%;
+  margin-bottom: 29px;
+}
+.ctc-us__input {
+  max-width: 270px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  background: #ffffff;
+  margin-right: 26px;
+  margin-bottom: 21px;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 130.9%;
+  color: #606060;
+  padding: 0 15px;
+}
+.ctc-us__input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 130.9%;
+  color: #606060;
+}
+.ctc-us__btn {
+  min-width: 190px;
+  height: 40px;
+  font-family: "Exo 2", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  border: none;
+  background-color: #de172c;
+  color: #ffffff;
+  transition: 0.3s;
+}
+.ctc-us__btn:hover {
+  background: #e92d41;
+  box-shadow: 0px 5px 17px 5px rgba(0, 0, 0, 0.2);
+}
+.ctc-us__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.ctc-us__label {
+  position: relative;
+  padding-left: 36px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #808080;
+}
+.ctc-us__label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: -2px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+}
+.ctc-us__label a {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.ctc-us__checkbox:checked + .ctc-us__label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10.418' cy='10.0542' r='10' fill='white'/%3E%3Ccircle cx='10.418' cy='10.0542' r='5' fill='%23E98590'/%3E%3C/svg%3E%0A");
+}
+.scroll-up {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  background: #bfbfbf;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: .3s;
+}
+.scroll-up::before{
+  content: '';
+  position: relative;
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg width='31' height='27' viewBox='0 0 31 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.8014 25.9558C2.53246 27.1845 0.410156 26.2853 0.410156 24.519L0.410156 14.4703C0.410156 13.9287 0.629818 13.4103 1.01892 13.0335L13.8736 0.586604C14.6491 -0.164301 15.8806 -0.164302 16.6561 0.586603L29.5108 13.0335C29.8999 13.4103 30.1196 13.9287 30.1196 14.4703L30.1196 24.519C30.1196 26.2853 27.9973 27.1845 26.7284 25.9558L16.6561 16.2031C15.8806 15.4522 14.6492 15.4522 13.8736 16.2031L3.8014 25.9558Z' fill='white'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+}
+.scroll-up:hover{
+  background: #E98590;
+}
+.popup-info{
+  display: none
+}
+.popup-info.block{
+  display: block
+}
+.popup-info{
+  position: fixed;
+  z-index: 600;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.burger-btn,
+.popup-close{
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  right: 10px;
+  top: 10px;
+  background: none;
+  outline: none;
+  transition: 0.3s;
+  z-index: 200;
+}
+.popup-close::after{
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #de172c;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+
+.popup-close::before {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #de172c;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+
+.popup-close::after{
+transform: rotate(-45deg);
+top: 50%;
+}
+.popup-close::before{
+transform: rotate(45deg);
+top: 50%;
+}
+.burger-btn{
+  display: none
+}
+
+
+//ctc-form end
+ @import "media";

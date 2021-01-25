@@ -1,0 +1,57 @@
+.article {
+  padding-top: 82px;
+  padding-bottom: 200px;
+}
+.article__wrapper{
+    margin-left: 10px;
+}
+.article__main-title {
+  max-width: 770px;
+  width: 100%;
+  margin-bottom: 14px;
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 34px;
+  color: #404040;
+}
+.article__date {
+  display: block;
+  max-width: 70px;
+  width: 100%;
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+  color: #202020;
+}
+.article__img {
+  height: 500px;
+  object-fit: contain;
+}
+.article__title {
+  max-width: 770px;
+  width: 100%;
+  margin-top: 56px;
+  margin-bottom: 32px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #202020;
+}
+.article__text {
+  max-width: 970px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 130.9%;
+  color: #606060;
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Применение</title>
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+		<!-- POPUP-CALLBACK -->
+		<div class="popup">
+			<button class="popup-close"></button>
+			<div class="block-one">
+				<h2 class="block-one__title">Заказать обратный звонок</h2>
+				<p class="block-one__text">
+					Наш менеджер перезвонит вам в течение 5 минут
+				</p>
+				<form class="ctc-us__form" action="" >
+					<input class="ctc-us__input name" type="text" form="quiz-form" placeholder="Имя">
+					<input class="ctc-us__input phone" type="text" form="quiz-form" placeholder="+7(___)-___-__-__">
+					<input class="ctc-us__checkbox" id="popup-rules" type="checkbox" checked>
+					<label class="ctc-us__label" for="popup-rules">Даю согласие на <span>обработку персональных
+							данных.</span></label>
+					<input class="ctc-us__btn" id="popup-send" type="button" value="Отправить">
+				</form>
+			</div>
+			<div class="block-two">
+				<h2 class="block-two__title">
+					Спасибо, что обратились к нам!
+				</h2>
+			</div>
+		</div>
+		<!-- POPUP-CALLBACK -->
+		<!-- QUIZ-POPUP -->
+		<div class="quiz">
+			<button class="popup-close"></button>
+			<form class="quiz-form" id="quiz-form" action="">
+				<p class="quiz__text">
+					Ответьте на пару вопросов, и мы онлайн рассчитаем стоимость ТПЭ под ваши нужды.
+				</p>
+				<div class="quiz__status-bar"><span></span></div>
+				<div class="quiz-bone">
+					<h2 class="quiz__title">Какие детали вы производите?</h2>
+					<textarea class="quiz-bone__textarea" name="" id="QuizAreaOne" form="quiz-form" placeholder="Название и описание"></textarea>
+					<button class="quiz__btn-next"  type="button">Далее</button>
+				</div>
+				<div class="quiz-btwo">
+					<h2 class="quiz__title">Какой материал вы используете в данный момент?</h2>
+					<textarea class="quiz-bone__textarea" name="" id="" form="quiz-form" placeholder="Название"></textarea>
+					<button class="quiz__btn-back"  type="button">Назад</button>
+					<button class="quiz__btn-next"  type="button">Далее</button>
+				</div>
+				<div class="quiz-bthree">
+					<h2 class="quiz__title">Почему вам необходим новый материал?</h2>
+					<p class="quiz__subtitle">(Что вас не устраивает в эксплуатируемом материале?)</p>
+					<textarea  class="quiz-bone__textarea" name="" id="" form="quiz-form" placeholder="Что не устраивает"></textarea>
+					<button class="quiz__btn-back"  type="button">Назад</button>
+					<button class="quiz__btn-next"  type="button">Далее</button>
+				</div>
+				<div class="quiz-bfour">
+					<h2 class="quiz__title">Опишите требования к новому материалу.</h2>
+					<p class="quiz__subtitle">(Физические, механические.)</p>
+					<textarea class="quiz-bone__textarea" name="" id="" form="quiz-form" placeholder="Требования"></textarea>
+					<button class="quiz__btn-back" type="button">Назад</button>
+					<button class="quiz__btn-next"  type="button">Далее</button>
+				</div>
+				<div class="quiz-bfive">
+					<h2 class="quiz__title">Объем и сроки поставок</h2>
+					<textarea  class="quiz-bone__textarea" name="" id="" form="quiz-form" placeholder="Объем и сроки"></textarea>
+					<button class="quiz__btn-back"  type="button">Назад</button>
+					<button class="quiz__btn-next"  type="button">Далее</button>
+				</div>
+				<div class="quiz-bsix">
+					<h2 class="quiz__title">Обратная связь</h2>
+					<input class="ctc-us__input name" type="text" form="quiz-form" placeholder="Имя">
+					<input class="ctc-us__input phone" type="text" form="quiz-form" placeholder="+7(___)-___-__-__">
+					<input class="ctc-us__checkbox" id="quiz-rules" type="checkbox" form="quiz-form" checked>
+					<label class="ctc-us__label" for="quiz-rules" form="quiz-form">Даю согласие на <span>обработку персональных
+							данных.</span></label>
+					<button class="quiz__btn-back"  type="button">Назад</button>
+					<input class="quiz__btn-send" type="button" value="Отправить" form="quiz-form">
+				</div>
+			</form>
+		</div>
+		<div class="quiz-final">
+			<h2 class="quiz__title">Спасибо!</h2>
+			<p class="quiz__subtitle">Наш менеджер подготовит индивидуальное предложение и позвонит вам</p>
+		</div>
+	<div class="quiz-mask"></div>
+	<!-- QUIZ-POPUP -->
+	<header class="header">
+		<div class="container">
+			<div class="header__wrapper">
+				<a class="logo__link" href="index.html">
+					<img class="logo__img" src="images/logo.png" alt="Depsol Polymers logo">
+				</a>
+				<div class="header__menu-wrapper">
+					<nav class="header__menu">
+						<ul class="header__menu-list">
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="about.html">О нас</a>
+							</li>
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="use.html">Применение</a>
+							</li>
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="news.html">Новости</a>
+							</li>
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="documentation.html">Документация</a>
+							</li>
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="contacts.html">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+					<ul class="header__polymer-list">
+						<li class="header__polymer-item">
+							<a class="header__polymer-link" href="products.html">SBS-TPE</a>
+						</li>
+						<li class="header__polymer-item">
+							<a class="header__polymer-link" href="products.html">SEBS-TPE</a>
+						</li>
+						<li class="header__polymer-item">
+							<a class="header__polymer-link" href="products.html">TPV</a>
+						</li>
+						<li class="header__polymer-item">
+							<a class="header__polymer-link" href="products.html">TPU</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header__phone-wrapper">
+					<a class="header__phone" href="tel:81234567890">8 (123) 456-78-90</a>
+					<button class="header__btn">Подобрать полимер</button>
+				</div>
+			</div>
+		</div>
+	</header>
+    <main class="main">
+        <section class="contacts-bone">
+            <h1 class="contacts__main-title">Контакты</h1>
+            <div class="contacts-bone__map">
+                <div class="conainer">
+                    <div class="contacts-bone__wrapper">
+                        <div class="contacts-bone__card adress">
+                            <span class="contacts-bone__card-title">Адрес:</span>
+                            <span class="contacts-bone__card-text">г. Москва, Дмитровское шоссе, 60 А</span>
+                        </div>
+                        <div class="contacts-bone__card phone">
+                            <span class="contacts-bone__card-title">Телефоны:</span>
+                            <a class="contacts-bone__card-text" href="tel:+71234567890">+7 (123) 456-78-90</a>
+                            <a class="contacts-bone__card-text" href="tel:+71234567890">+7 (123) 456-78-90</a>
+                        </div>
+                        <div class="contacts-bone__card email">
+                            <span class="contacts-bone__card-title">Почта:</span>
+                            <a class="contacts-bone__card-text" href="mailto:info@depsol.ru">info@depsol.ru</a>
+                        </div>
+                        <div class="contacts-bone__card hours">
+                            <span class="contacts-bone__card-title">Часы работы:</span>
+                            <span class="contacts-bone__card-text">Пн-вс 09:00 - 21:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <ul class="contacts-bone__list">
+                    <li class="contacts-bone__item-title">ООО "ДЕПСОЛ"</li>
+                    <li class="contacts-bone__item">ИНН 455454545</li>
+                    <li class="contacts-bone__item">КПП 4545454545</li>
+                    <li class="contacts-bone__item">ОГРН 454565765877980908</li>
+                    <li class="contacts-bone__item">р/сч 40701810954645767868970003 в Филиале № 6318
+                        Банка ВТБ (ПАО) г. Москва</li>
+                    <li class="contacts-bone__item">БИК 043601968</li>
+                    <li class="contacts-bone__item">кор/сч 3010182441042206701968</li>
+                </ul>
+            </div>
+        </section>
+        <section class="contacts-btwo">
+			<div class="container">
+				<div class="ctc-us__wrapper">
+					<h3 class="ctc-us__title">Связаться с нами</h3>
+					<p class="ctc-us__text">На портрете была изображена дама в меховой шляпе и боа, она сидела
+						очень прямо и протягивала зрителю тяжелую меховую муфту.</p>
+					<form class="ctc-us__form" action="">
+						<input class="ctc-us__input name" type="text">
+						<input class="ctc-us__input phone" type="text">
+						<input class="ctc-us__btn" type="button" value="Отправить">
+						<input class="ctc-us__checkbox" id="rules" type="checkbox">
+                        <label class="ctc-us__label" for="rules">Даю согласие на <span>обработку персональных
+                            данных.</span></label>
+					</form>
+				</div>
+			</div>
+		</section>
+    </main>
+    <div class="scroll-up" id="scroll-up"></div>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrapper">
+				<a class="logo__link" href="#">
+					<img class="logo__img" src="images/logo-footer.png" alt="Depsol Polymers logo">
+				</a>
+				<div class="footer__phone-wrapper">
+					<a class="footer__phone" href="tel:81234567890">8 (123) 456-78-90</a>
+					<button class="footer__btn">Обратный звонок</button>
+					<a  class="footer__email" href="mailto:info@depsol.ru">info@depsol.ru</a>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<span class="footer__copyrigh">© depsol.ru 2020</span>
+				<a class="footer__link" href="#" >Согласие на обработку ПД</a>
+				<a class="footer__link" href="#" >Политика обработки ПД</a>
+			</div>
+		</div>
+	</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

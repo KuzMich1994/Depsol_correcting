@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Типовая продукция</title>
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    	<!-- POPUP-CALLBACK -->
+	<div class="popup">
+		<button class="popup-close"></button>
+        <div class="block-one">
+            <h2 class="block-one__title">Заказать обратный звонок</h2>
+            <p class="block-one__text">
+                Наш менеджер перезвонит вам в течение 5 минут
+            </p>
+            <form class="ctc-us__form" action="" >
+                <input class="ctc-us__input name" type="text" form="quiz-form" placeholder="Имя">
+                <input class="ctc-us__input phone" type="text" form="quiz-form" placeholder="+7(___)-___-__-__">
+                <input class="ctc-us__checkbox" id="popup-rules" type="checkbox" checked>
+                <label class="ctc-us__label" for="popup-rules">Даю согласие на <span>обработку персональных
+                        данных.</span></label>
+                <input class="ctc-us__btn" id="popup-send" type="button" value="Отправить">
+            </form>
+        </div>
+        <div class="block-two">
+            <h2 class="block-two__title">
+                Спасибо, что обратились к нам!
+            </h2>
+        </div>
+	</div>
+	<!-- POPUP-CALLBACK -->
+    	<!-- QUIZ-POPUP -->
+        <div class="quiz">
+            <button class="popup-close"></button>
+            <form class="quiz-form" id="quiz-form" action="">
+                <p class="quiz__text">
+                    Ответьте на пару вопросов, и мы онлайн рассчитаем стоимость ТПЭ под ваши нужды.
+                </p>
+                <div class="quiz__status-bar"><span></span></div>
+                <div class="quiz-bone">
+                    <h2 class="quiz__title">Какие детали вы производите?</h2>
+                    <textarea class="quiz-bone__textarea" name="details" id="QuizAreaOne" form="quiz-form" placeholder="Название и описание"></textarea>
+                    <button class="quiz__btn-next"  type="button">Далее</button>
+                </div>
+                <div class="quiz-btwo">
+                    <h2 class="quiz__title">Какой материал вы используете в данный момент?</h2>
+                    <textarea class="quiz-bone__textarea" name="matherial" id="" form="quiz-form" placeholder="Название"></textarea>
+                    <button class="quiz__btn-back"  type="button">Назад</button>
+                    <button class="quiz__btn-next"  type="button">Далее</button>
+                </div>
+                <div class="quiz-bthree">
+                    <h2 class="quiz__title">Почему вам необходим новый материал?</h2>
+                    <p class="quiz__subtitle">(Что вас не устраивает в эксплуатируемом материале?)</p>
+                    <textarea  class="quiz-bone__textarea" name="newMatherial" id="" form="quiz-form" placeholder="Что не устраивает"></textarea>
+                    <button class="quiz__btn-back"  type="button">Назад</button>
+                    <button class="quiz__btn-next"  type="button">Далее</button>
+                </div>
+                <div class="quiz-bfour">
+                    <h2 class="quiz__title">Опишите требования к новому материалу.</h2>
+                    <p class="quiz__subtitle">(Физические, механические.)</p>
+                    <textarea class="quiz-bone__textarea" name="requirements" id="" form="quiz-form" placeholder="Требования"></textarea>
+                    <button class="quiz__btn-back" type="button">Назад</button>
+                    <button class="quiz__btn-next"  type="button">Далее</button>
+                </div>
+                <div class="quiz-bfive">
+                    <h2 class="quiz__title">Объем и сроки поставок</h2>
+                    <textarea  class="quiz-bone__textarea" name="terms" id="" form="quiz-form" placeholder="Объем и сроки"></textarea>
+                    <button class="quiz__btn-back"  type="button">Назад</button>
+                    <button class="quiz__btn-next"  type="button">Далее</button>
+                </div>
+                <div class="quiz-bsix">
+                    <h2 class="quiz__title">Обратная связь</h2>
+                    <input class="ctc-us__input name" type="text" name="fio" form="quiz-form" placeholder="Имя">
+                    <input class="ctc-us__input phone" type="text" name="tel" form="quiz-form" placeholder="+7(___)-___-__-__">
+                    <input class="ctc-us__checkbox" id="quiz-rules" name="rules" type="checkbox" form="quiz-form" checked>
+                    <label class="ctc-us__label" for="quiz-rules" form="quiz-form">Даю согласие на <span>обработку персональных
+                            данных.</span></label>
+                    <button class="quiz__btn-back"  type="button">Назад</button>
+                    <input class="quiz__btn-send" type="submit" value="Отправить" form="quiz-form">
+                </div>
+            </form>
+        </div>
+        <div class="quiz-final">
+            <h2 class="quiz__title">Спасибо!</h2>
+            <p class="quiz__subtitle">Наш менеджер подготовит индивидуальное предложение и позвонит вам</p>
+        </div>
+    <div class="quiz-mask"></div>
+    <!-- QUIZ-POPUP -->
+
+    <div class="popup-info">
+        <button class="popup-close"></button>
+        <h2 class="popup-info__title">Марка эластомера</h2>
+        <div class="popup-info__wrapper">
+            <div class="popup-info__col">
+                <h3 class="popup-info__subtitle">Специфические свойства:</h3>
+                <p class="popup-info__text">Стирольный термоэластопласт компаунд, предназначен для изготовления изделий
+                    с
+                    резиновыми свойствами.</p>
+                <h3 class="popup-info__subtitle">Применение:</h3>
+                <p class="popup-info__text">Подошвы окрашиваемые в различные цвета. Подошвыпрогулочной обуви. Подошвы
+                    треккинговой обуви. Подошвы детской обуви. Подошвы женской обуви</p>
+            </div>
+            <div class="popup-info__col">
+                <table class="popup-info__table">
+                    <tr>
+                        <td>Твердость, ед.</td>
+                        <td>80±2</td>
+                    </tr>
+                    <tr>
+                        <td>Плотность, г/см3</td>
+                        <td>1,18±0,01</td>
+                    </tr>
+                    <tr>
+                        <td>ПТР, г/10 мин</td>
+                        <td>70±25</td>
+                    </tr>
+                </table>
+                <a class="popup-info__link" href="#" download>Техническое описание</a>
+                <a class="popup-info__link" href="#" download>Паспорт безопасности</a>
+            </div>
+        </div>
+        <button class="popup-info__btn">Получить консультацию</button>
+    </div>
+    <div class="quiz-mask"></div>
+
+	<header class="header">
+		<div class="container">
+			<div class="header__wrapper">
+				<a class="logo__link" href="index.html">
+					<img class="logo__img" src="images/logo.png" alt="Depsol Polymers logo">
+                </a>
+                <button class="burger-btn">
+				</button>
+				<div class="header__menu-wrapper">
+					<nav class="header__menu">
+						<ul class="header__menu-list">
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="about.html">О нас</a>
+							</li>
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="use.html">Применение</a>
+							</li>
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="news.html">Новости</a>
+							</li>
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="documentation.html">Документация</a>
+							</li>
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="contacts.html">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+					<ul class="header__polymer-list">
+						<li class="header__polymer-item">
+							<a class="header__polymer-link" href="products.html">SBS-TPE</a>
+						</li>
+						<li class="header__polymer-item">
+							<a class="header__polymer-link" href="products.html">SEBS-TPE</a>
+						</li>
+						<li class="header__polymer-item">
+							<a class="header__polymer-link" href="products.html">TPV</a>
+						</li>
+						<li class="header__polymer-item">
+							<a class="header__polymer-link" href="products.html">TPU</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header__phone-wrapper">
+					<a class="header__phone" href="tel:81234567890">8 (123) 456-78-90</a>
+					<button class="header__btn">Подобрать полимер</button>
+				</div>
+			</div>
+		</div>
+	</header>
+    <main class="main">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="#">Главная</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link active" href="#">СБС</a>
+                </li>
+            </ul>
+        </div>
+        <section class="products-bone">
+            <div class="container">
+                <div class="products-bone__wrapper">
+                    <h1 class="products-bone__title">СБС (TPE-SBS)</h1>
+                    <p class="products-bone__subtitle">Термопластичный эластомер</p>
+                    <p class="products-bone__text">Стирольный термоэластопласт компаунд, предназначен для изготовления
+                        изделий с резиновыми свойствами.</p>
+                    <div class="products-bone__inner">
+                        <div class="list-wrapper">
+                            <ul class="products-bone__list">
+                                <li class="products-bone__item">Стойкость к истиранию</li>
+                                <li class="products-bone__item">Атмосферостойксть</li>
+                                <li class="products-bone__item">Эластичность при отрицательных температурах</li>
+                                <li class="products-bone__item">Адгезия с ПП, ПС</li>
+                            </ul>
+                        </div>
+                        <div class="tanle-wrapper">
+                            <table class="products-bone__table">
+                                <tr>
+                                    <td>Семейство ТЭП</td>
+                                    <td>СЭБС SEBS</td>
+                                </tr>
+                                <tr>
+                                    <td>Твердость</td>
+                                    <td>5 Шор А – 60 Шор Д</td>
+                                </tr>
+                                <tr>
+                                    <td>Температура эксплуатации</td>
+                                    <td>от -70 до + 120⁰С</td>
+                                </tr>
+                                <tr>
+                                    <td>УФ стойкость</td>
+                                    <td>+</td>
+                                </tr>
+                                <tr>
+                                    <td>Литье под давлением</td>
+                                    <td>+</td>
+                                </tr>
+                                <tr>
+                                    <td>Экструзия</td>
+                                    <td>+</td>
+                                </tr>
+                                <tr>
+                                    <td>Огнестойкие марки</td>
+                                    <td>+</td>
+                                </tr>
+                                <tr>
+                                    <td>Адгезия с полимерами</td>
+                                    <td>ПП, ПС, АБС, ПММА</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="products-btwo">
+            <div class="container">
+                <div class="products-btwo__wrapper">
+                    <p class="products-btwo__text">Ответьте на пару вопросов, и мы онлайн рассчитаем стоимость ТПЭ под
+                        ваши нужды.</p>
+                    <button class="products-btwo__btn">Подобрать полимер</button>
+                </div>
+            </div>
+        </section>
+        <section class="products-bthree">
+            <div class="container">
+                <h2 class="products-bthree__title">Сферы применения</h2>
+            </div>
+            <div class="index-bthree__slider">
+                <div class="index-bthree__card">
+                    <a class="index-bthree__card-link" href="#">
+                        <figure>
+                            <img class="index-bthree__card-img" src="images/index-scopeofappl-1.png" alt="">
+                        </figure>
+                        <div class="index-bthree__card-text">
+                            <h3 class="index-bthree__card-title">Автомобиле-строение</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="index-bthree__card">
+                    <a class="index-bthree__card-link" href="#">
+                        <figure>
+                            <img class="index-bthree__card-img" src="images/index-scopeofappl-2.png" alt="">
+                        </figure>
+                        <div class="index-bthree__card-text">
+                            <h3 class="index-bthree__card-title">Обувь</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="index-bthree__card">
+                    <a class="index-bthree__card-link" href="#">
+                        <figure>
+                            <img class="index-bthree__card-img" src="images/index-scopeofappl-3.png" alt="">
+                        </figure>
+                        <div class="index-bthree__card-text">
+                            <h3 class="index-bthree__card-title">Потребительские товары</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="index-bthree__card">
+                    <a class="index-bthree__card-link" href="#">
+                        <figure>
+                            <img class="index-bthree__card-img" src="images/index-scopeofappl-4.png" alt="">
+                        </figure>
+                        <div class="index-bthree__card-text">
+                            <h3 class="index-bthree__card-title">Спортивые товары</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="index-bthree__card">
+                    <a class="index-bthree__card-link" href="#">
+                        <figure>
+                            <img class="index-bthree__card-img" src="images/index-scopeofappl-5.png" alt="">
+                        </figure>
+                        <div class="index-bthree__card-text">
+                            <h3 class="index-bthree__card-title">Медицина</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="index-bthree__card">
+                    <a class="index-bthree__card-link" href="#">
+                        <figure>
+                            <img class="index-bthree__card-img" src="images/index-scopeofappl-6.png" alt="">
+                        </figure>
+                        <div class="index-bthree__card-text">
+                            <h3 class="index-bthree__card-title">Кабели</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="index-bthree__card">
+                    <a class="index-bthree__card-link" href="#">
+                        <figure>
+                            <img class="index-bthree__card-img" src="images/index-scopeofappl-6.png" alt="">
+                        </figure>
+                        <div class="index-bthree__card-text">
+                            <h3 class="index-bthree__card-title">Кабели</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="products-bfour">
+            <div class="container">
+                <h2 class="products-bfour__title">Переработка</h2>
+            </div>
+            <div class="products-bfour__wrapper">
+                <div class="products-bfour__card">
+                    <div class="products-bfour__card-inn">
+                        <img class="products-bfour__img left" src="images/products-quipment-1.png" alt="">
+                    </div>
+                    <p class="pproducts-bfour__text left">Литье под давлением</p>
+                </div>
+                <div class="products-bfour__card">
+                    <div class="products-bfour__card-inn right">
+                        <img class="products-bfour__img" src="images/products-quipment-2.png" alt="">
+                    </div>
+                    <p class="pproducts-bfour__text">Экструзия</p>
+                </div>
+            </div>
+        </section>
+        <section class="products-bfive">
+            <div class="container">
+                <div class="products-bfive__wrapper">
+                    <a class="products-bfive__card-link" data-id="0" href="#">Марка эластомера</a>
+                    <a class="products-bfive__card-link" data-id="1" href="#">Марка эластомера</a>
+                    <a class="products-bfive__card-link" data-id="2" href="#">Марка эластомера</a>
+                    <a class="products-bfive__card-link" data-id="3" href="#">Марка эластомера</a>
+                    <a class="products-bfive__card-link" data-id="4" href="#">Марка эластомера</a>
+                    <a class="products-bfive__card-link" data-id="5" href="#">Марка эластомера</a>
+                    <a class="products-bfive__card-link" data-id="6" href="#">Марка эластомера</a>
+                    <a class="products-bfive__card-link" data-id="7" href="#">Марка эластомера</a>
+                </div>
+                <a class="products-bfive__link" href="#">Показать еще</a>
+            </div>
+            </div>
+        </section>
+        <section class="products-bsix">
+            <div class="index-bfive__row-1">
+                <div class="index-bfive__content">
+                    <p class="index-bfive__text dedicated">Разработаем рецептуру и технологию</p>
+                    <p class="index-bfive__text">под ваши задачи. Проконсультируем на всех этапах.</p>
+                </div>
+                <img class="index-bfive__img" src="images/index-offer-1.png" alt="">
+            </div>
+            <div class="index-bfive__row-2">
+                <div class="index-bfive__content">
+                    <p class="index-bfive__text 
+                dedicated">Отправим образец</p>
+                    <p class="index-bfive__text">в вашу лабораторию.</p>
+                </div>
+                <img class="index-bfive__img" src="images/index-offer-2.png" alt="">
+            </div>
+            <div class="index-bfive__row-3">
+                <div class="index-bfive__content">
+                    <p class="index-bfive__text">Обеспечим безопасные</p>
+                    <p class="index-bfive__text dedicated">мультимодальные перевозки</p>
+                </div>
+                <img class="index-bfive__img" src="images/index-offer-3.png" alt="">
+            </div>
+            </div>
+        </section>
+        <section class="products-bseven">
+            <div class="container">
+                <div class="ctc-us__wrapper">
+                    <h3 class="ctc-us__title">Связаться с нами</h3>
+                    <p class="ctc-us__text">На портрете была изображена дама в меховой шляпе и боа, она сидела
+                        очень прямо и протягивала зрителю тяжелую меховую муфту.</p>
+                    <form class="ctc-us__form" id="contact-form">
+                        <input class="ctc-us__input name" type="text" name="fio" placeholder="Имя" form="contact-form">
+                        <input class="ctc-us__input phone" type="text" name="tel" id="phone" placeholder="+7(___)-___-__-__"
+                            form="contact-form">
+                        <input class="ctc-us__btn" type="submit" value="Отправить" form="contact-form">
+                        <input class="ctc-us__checkbox" id="rules" name="rules" type="checkbox" form="contact-form" checked>
+                        <label class="ctc-us__label" for="rules" form="contact-form">Даю согласие на <a
+                                href="#">обработку персональных
+                                данных.</a></label>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="scroll-up" id="scroll-up"></div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <a class="logo__link" href="#">
+                    <img class="logo__img" src="images/logo-footer.png" alt="Depsol Polymers logo">
+                </a>
+                <div class="footer__phone-wrapper">
+                    <a class="footer__phone" href="tel:81234567890">8 (123) 456-78-90</a>
+                    <button class="footer__btn">Обратный звонок</button>
+                    <a class="footer__email" href="mailto:info@depsol.ru">info@depsol.ru</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span class="footer__copyrigh">© depsol.ru 2020</span>
+                <a class="footer__link" href="#">Согласие на обработку ПД</a>
+                <a class="footer__link" href="#">Политика обработки ПД</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

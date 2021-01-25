@@ -1,0 +1,93 @@
+{
+  "cards": [
+    {
+      "id": "0",
+      "severity": "80±2",
+      "density": "1,18±0,01",
+      "ptr": "70±25",
+      "firstLink": "#",
+      "secondLink": "#",
+      "title": "Заголовок 1",
+      "characteristics": "Текст 1",
+      "use": "Использование 1"
+    },
+    {
+      "id": "1",
+      "severity": "81±4",
+      "density": "2,18±0,03",
+      "ptr": "71±25",
+      "firstLink": "../index.html",
+      "secondLink": "../index.html",
+      "title": "Заголовок 2",
+      "characteristics": "Текст 2",
+      "use": "Использование 2"
+    },
+    {
+      "id": "2",
+      "severity": "815±4",
+      "density": "2,18±0,03",
+      "ptr": "71±25",
+      "firstLink": "../contacts.html",
+      "secondLink": "../contacts.html",
+      "title": "Заголовок 3",
+      "characteristics": "Текст 3",
+      "use": "Использование 3"
+    },
+    {
+      "id": "3",
+      "severity": "75±7",
+      "density": "2,25±0,13",
+      "ptr": "72±45",
+      "firstLink": "../about.html",
+      "secondLink": "../about.html",
+      "title": "Заголовок 4",
+      "characteristics": "Текст 4",
+      "use": "Использование 4"
+    },
+    {
+      "id": "4",
+      "severity": "15±8",
+      "density": "3,12±1,03",
+      "ptr": "51±15",
+      "firstLink": "../article.html",
+      "secondLink": "../article.html",
+      "title": "Заголовок 5",
+      "characteristics": "Текст 5",
+      "use": "Использование 5"
+    },
+    {
+      "id": "5",
+      "severity": "15±4",
+      "density": "12,18±0,03",
+      "ptr": "21±25",
+      "firstLink": "../news.html",
+      "secondLink": "../news.html",
+      "title": "Заголовок 6",
+      "characteristics": "Текст 6",
+      "use": "Использование 6"
+    },
+    {
+      "id": "6",
+      "severity": "8±4",
+      "density": "22,18±0,03",
+      "ptr": "57±25",
+      "firstLink": "../use.html",
+      "secondLink": "../use.html",
+      "title": "Заголовок 7",
+      "characteristics": "Текст 7",
+      "use": "Использование 7"
+    },
+    {
+      "id": "7",
+      "severity": "115±4",
+      "density": "3,18±5,03",
+      "ptr": "12±25",
+      "firstLink": "../popup.html",
+      "secondLink": "../popup.html",
+      "title": "Заголовок 8",
+      "characteristics": "Текст 8",
+      "use": "Использование 8"
+    }
+  ]
+}
+
