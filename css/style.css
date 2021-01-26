@@ -2306,7 +2306,7 @@
 
 .quiz,
 .quiz-final {
-  position: absolute;
+  position: fixed;
   max-width: 900px;
   width: 100%;
   min-height: 600px;
@@ -2700,6 +2700,21 @@
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
+}
+
+.modal-img__wrapper {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  cursor: zoom-out;
+}
+
+.modal-img {
+  position: relative;
+  transform: scale(1.5);
 }
 
 .doc-block {

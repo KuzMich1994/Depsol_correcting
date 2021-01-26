@@ -177,6 +177,14 @@ $('.header__btn').click(function () {
   StatusBar.css("width", "83px");
   CurrentPage = 1;
 })
+$('.use__btn').click(function () {
+  $('.quiz').addClass('block');
+  PageOne.addClass('block');
+  $('.quiz-mask').addClass('block');
+  $('body').addClass('scroll-hidden');
+  StatusBar.css("width", "83px");
+  CurrentPage = 1;
+})
 
 
 
@@ -428,8 +436,6 @@ const sendForm = () => {
   const contactForm = document.getElementById('contact-form');
   const quizForm = document.getElementById('quiz-form');
   const contactInputs = document.querySelectorAll('[type="text"]');
-  // const phoneInput = document.querySelectorAll('.validate-phone');
-  // const nameInput = document.querySelectorAll('.validate-name');
   const quizTextarea = document.querySelectorAll('textarea');
   const errorMessage = 'Что-то пошло не так...';
   const loadMessage = 'Загрузка...';
@@ -671,5 +677,30 @@ const showMask = () => {
 };
 
 showMask();
+
+const toggleCertificateImg = () => {
+  const certificateImg = document.querySelectorAll('.index-bfour__img');
+  const indexBfour = document.querySelector('.index-bfour');
+  const modalImg = document.querySelector('.modal-img__wrapper');
+  const quizMask = document.querySelector('.quiz-mask');
+
+  if (indexBfour) {
+    document.addEventListener('click', e => {
+      const target = e.target;
+      if (target.matches('.index-bfour__img-wrapper')) {
+        modalImg.classList.add('block');
+        quizMask.classList.add('block');
+        document.body.classList.add('scroll-hidden');
+      }
+      if (target.matches('.modal-img') || target.matches('.quiz-mask')) {
+        modalImg.classList.remove('block');
+        quizMask.classList.remove('block');
+        document.body.classList.remove('scroll-hidden');
+      }
+    });
+  }
+};
+
+toggleCertificateImg();
 
 
