@@ -1,0 +1,49 @@
+.fio-error {
+  position: absolute;
+  left: 2px;
+  top: -20px;
+  z-index: 999;
+  color: #DE172C;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+}
+.tel-error {
+  position: absolute;
+  left: 300px;
+  top: -20px;
+  z-index: 999;
+  color: #DE172C;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+.quiz__tel-error {
+  position: absolute;
+  top: 250px;
+  left: 280px;
+  max-width: 130px;
+  color: #DE172C;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+}
+.quiz__fio-error {
+  position: absolute;
+  top: 196px;
+  left: 280px;
+  max-width: 150px;
+  color: #DE172C;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+}
+
+.error__value {
+  color: #DE172C !important;
+}

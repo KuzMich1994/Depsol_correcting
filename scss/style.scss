@@ -73,6 +73,7 @@
   font-display: swap;
 }
 
+@import "settings";
 @import "use";
 @import "news";
 @import "index";
@@ -118,11 +119,15 @@ body{
   overflow-x: hidden;
   height: 100%;
 }
-body.active {
-  position: sticky;
-  overflow: hidden;
-  height: 150vh;
+
+body::-webkit-scrollbar {
+  width: 20px;
 }
+body::-webkit-scrollbar-thumb {
+  background-color: #E98590;
+  border-radius: 4px;
+}
+
 
 ul,
 li {
@@ -209,6 +214,9 @@ button {
 //Slick-Slider arrows
 
 //ctc-form start
+.ctc-us__form {
+  position: relative;
+}
 .ctc-us__wrapper {
   max-width: 800px;
   width: 100%;

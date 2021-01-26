@@ -63,6 +63,58 @@
   font-display: swap;
 }
 
+.fio-error {
+  position: absolute;
+  left: 2px;
+  top: -20px;
+  z-index: 999;
+  color: #DE172C;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+.tel-error {
+  position: absolute;
+  left: 300px;
+  top: -20px;
+  z-index: 999;
+  color: #DE172C;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+.quiz__tel-error {
+  position: absolute;
+  top: 250px;
+  left: 280px;
+  max-width: 130px;
+  color: #DE172C;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+}
+
+.quiz__fio-error {
+  position: absolute;
+  top: 196px;
+  left: 280px;
+  max-width: 150px;
+  color: #DE172C;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+}
+
+.error__value {
+  color: #DE172C !important;
+}
+
 .use__wrapper {
   position: relative;
   margin-bottom: 50px;
@@ -167,6 +219,7 @@
   background: #ffffff;
   box-shadow: 0px 5px 12px 5px rgba(56, 78, 160, 0.05);
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .use__slider-card::after {
@@ -2224,6 +2277,10 @@
   background-position: center;
 }
 
+.quiz-form {
+  position: relative;
+}
+
 .quiz-form textarea {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -2392,10 +2449,6 @@
 .quiz-bsix .ctc-us__input {
   display: block;
   margin-bottom: 14px;
-}
-
-.quiz-bsix .ctc-us__input + .ctc-us__input {
-  margin-bottom: 32px;
 }
 
 .quiz-bsix .quiz__title {
@@ -2742,10 +2795,13 @@ body {
   height: 100%;
 }
 
-body.active {
-  position: sticky;
-  overflow: hidden;
-  height: 150vh;
+body::-webkit-scrollbar {
+  width: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #E98590;
+  border-radius: 4px;
 }
 
 ul,
@@ -2844,6 +2900,10 @@ button {
 .about-btwo__slider.slick-initialized.slick-slider .slick-next.slick-arrow {
   left: 127px;
   top: 23px;
+}
+
+.ctc-us__form {
+  position: relative;
 }
 
 .ctc-us__wrapper {

@@ -37,7 +37,7 @@
     	<!-- QUIZ-POPUP -->
         <div class="quiz">
             <button class="popup-close"></button>
-            <form class="quiz-form" id="quiz-form" action="">
+            <form class="quiz-form" id="quiz-form">
                 <p class="quiz__text">
                     Ответьте на пару вопросов, и мы онлайн рассчитаем стоимость ТПЭ под ваши нужды.
                 </p>
@@ -77,7 +77,7 @@
                     <h2 class="quiz__title">Обратная связь</h2>
                     <input class="ctc-us__input name" type="text" name="fio" form="quiz-form" placeholder="Имя">
                     <input class="ctc-us__input phone" type="text" name="tel" form="quiz-form" placeholder="+7(___)-___-__-__">
-                    <input class="ctc-us__checkbox" id="quiz-rules" name="rules" type="checkbox" form="quiz-form" checked>
+                    <input class="ctc-us__checkbox" id="quiz-rules" name="rules" type="checkbox" form="quiz-form">
                     <label class="ctc-us__label" for="quiz-rules" form="quiz-form">Даю согласие на <span>обработку персональных
                             данных.</span></label>
                     <button class="quiz__btn-back"  type="button">Назад</button>
@@ -398,15 +398,15 @@
                     <p class="ctc-us__text">На портрете была изображена дама в меховой шляпе и боа, она сидела
                         очень прямо и протягивала зрителю тяжелую меховую муфту.</p>
                     <form class="ctc-us__form" id="contact-form">
-                        <input class="ctc-us__input name" type="text" name="fio" placeholder="Имя" form="contact-form">
-                        <input class="ctc-us__input phone" type="text" name="tel" id="phone" placeholder="+7(___)-___-__-__"
-                            form="contact-form">
-                        <input class="ctc-us__btn" type="submit" value="Отправить" form="contact-form">
-                        <input class="ctc-us__checkbox" id="rules" name="rules" type="checkbox" form="contact-form" checked>
-                        <label class="ctc-us__label" for="rules" form="contact-form">Даю согласие на <a
-                                href="#">обработку персональных
-                                данных.</a></label>
-                    </form>
+						<input class="ctc-us__input name" type="text" name="fio" placeholder="Имя" form="contact-form">
+						<input class="ctc-us__input phone" type="text" name="tel" placeholder="+7(___)-___-__-__"
+							form="contact-form" pattern=".7\([0-9]{3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+						<input class="ctc-us__btn" type="submit" value="Отправить" form="contact-form"">
+						<input class=" ctc-us__checkbox" id="rules" name="rules" type="checkbox" form="contact-form">
+						<label class="ctc-us__label" for="rules" form="contact-form">Даю согласие на <a
+								href="#">обработку персональных
+								данных.</a></label>
+					</form>
                 </div>
             </div>
         </section>

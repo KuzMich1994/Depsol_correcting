@@ -4,6 +4,8 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
+sleep(3);
+
 // Переменные, которые отправляет пользователь
 $fio = $_POST['fio'];
 $tel = $_POST['tel'];

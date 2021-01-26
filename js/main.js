@@ -74,6 +74,7 @@ $(document).ready(function(){
     variableWidh: true,
     slidesToShow: 4,
     slidesToScroll: 4,
+    swipe: false,
     responsive: [
 	    {
 	      breakpoint: 1250,
@@ -82,14 +83,18 @@ $(document).ready(function(){
 	      }
 	    },
 	    {
-	      breakpoint: 950,
+        breakpoint: 950,
 	      settings: {
+          swipe: true,
+          slidesToScroll: 2,
 	        slidesToShow: 2,
 	      }
       },
       {
 	      breakpoint: 650,
 	      settings: {
+          swipe: true,
+          slidesToScroll: 1,
 	        slidesToShow: 1,
 	      }
 	    }
@@ -353,8 +358,6 @@ const showModalWindow = () => {
   const useBseven = document.querySelector('.use-bseven');
   const useBeight = document.querySelector('.use-beight');
   const useBnine = document.querySelector('.use-bnine');
-  // const useSliderCards = document.querySelectorAll('.use__slider-card');
-  //   console.log(useSliderCards);
 
   if (productsSection || useBone || useBtwo || useBthree || useBfour ||
     useBfive || useBsix || useBseven || useBeight || useBnine) {
@@ -425,13 +428,41 @@ const sendForm = () => {
   const contactForm = document.getElementById('contact-form');
   const quizForm = document.getElementById('quiz-form');
   const contactInputs = document.querySelectorAll('[type="text"]');
+  // const phoneInput = document.querySelectorAll('.validate-phone');
+  // const nameInput = document.querySelectorAll('.validate-name');
   const quizTextarea = document.querySelectorAll('textarea');
   const errorMessage = 'Что-то пошло не так...';
   const loadMessage = 'Загрузка...';
   const successMessage = 'Спасибо! Мы скоро с вами свяжемся!';
   const statusMessage = document.createElement('div');
-  console.log(contactForm);
-  console.log(quizForm);
+  const checkboxQuizRules = document.getElementById('quiz-rules');
+  const formBtn = document.querySelectorAll('.ctc-us__btn');
+  const quizBtnSend = document.querySelector('.quiz__btn-send');
+  const validatePhoneError = document.createElement('span');
+  const validateNameError = document.createElement('span');
+  const quizValidatePhoneError = document.createElement('span');
+  const quizValidateNameError = document.createElement('span');
+  quizValidatePhoneError.classList.add('quiz__tel-error')
+  quizValidateNameError.classList.add('quiz__fio-error')
+  validatePhoneError.classList.add('tel-error');
+  validateNameError.classList.add('fio-error');
+  validatePhoneError.textContent = 'Формат: +7(999)-999-99-99';
+  validateNameError.textContent = 'Не менее 2 символов кирилицы';
+  quizValidatePhoneError.textContent = 'Формат: +7(999)-999-99-99';
+  quizValidateNameError.textContent = `Не менее 2 символов кирилицы`;
+  console.log(contactInputs[2]);
+
+  quizBtnSend.disabled = true;
+  quizBtnSend.style.filter = 'opacity(20%)';
+
+  formBtn.forEach(item => {
+    item.disabled = true;
+    item.style.filter = 'opacity(20%)';
+  });
+  contactInputs.forEach(item => {
+    item.style.filter = 'opacity(20%)';
+    item.disabled = true;
+  });
 
   statusMessage.style.marginTop = '20px';
   
@@ -446,44 +477,141 @@ const sendForm = () => {
 
   let formData;
 
-  contactForm.addEventListener('submit', e => {
-    e.preventDefault();
-    contactForm.append(statusMessage);
-    statusMessage.textContent = loadMessage;
-    formData = new FormData(contactForm);
-    const body = {};
-    for (const val of formData) {
-      body[val[0]] = val[1];
+  const validateInputs = (selector, regPattern, errorMess) => {
+    const regExp = regPattern.test(selector.value);
+    if (regExp) {
+      errorMess.remove();
+      selector.style.boxShadow = '0px 5px 8px green';
+      selector.classList.remove('error__value');
+      formBtn.forEach(item => {
+      item.disabled = false;
+        item.style.filter = 'opacity(100%)';
+      });
+      quizBtnSend.disabled = false;
+      quizBtnSend.style.filter = 'opacity(100%)';
+    } else {
+      selector.after(errorMess);
+      selector.style.boxShadow = '0px 5px 8px rgba(222, 23, 44, 0.3)';
+      selector.classList.add('error__value');
+      formBtn.forEach(item => {
+        item.disabled = true;
+      });
+      quizBtnSend.disabled = true;
     }
-    
+  };
 
-    postData(JSON.stringify(body))
-      .then(response => {
-        if (response.status !== 200) {
-          throw new Error('Status network not 200');
+  if (contactInputs[3].value === '') {
+    quizBtnSend.disabled = true;
+  }
+
+  contactInputs.forEach(item => {
+    item.addEventListener('input', e => {
+      const currentTarget = e.currentTarget;
+      if (currentTarget.matches('.validate-phone')) {
+        validateInputs(currentTarget, /.7\([0-9]{3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}/, validatePhoneError);
+      }
+      if (currentTarget.matches('.quiz__validate-phone')) {
+        validateInputs(currentTarget, /.7\([0-9]{3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}/, quizValidatePhoneError);
+        if (contactInputs[2].value === '') {
+          quizBtnSend.disabled = true;
+          quizBtnSend.style.filter = 'opacity(20%)';
         }
-        statusMessage.textContent = successMessage;
-      })
-      .catch(error => {
-        statusMessage.textContent = errorMessage;
-        console.error(error);
-      })
-      .then(() => {
-        contactInputs.forEach(item => {
-          item.value = '';
-        })
-      })
+      }
+      if (currentTarget.matches('.validate-name')) {
+        validateInputs(currentTarget, /^[а-яА-Я]{2,}$/, validateNameError)
+      }
+      if (currentTarget.matches('.quiz__validate-name')) {
+        validateInputs(currentTarget, /^[а-яА-Я]{2,}$/, quizValidateNameError)
+        if (contactInputs[3].value === '') {
+          quizBtnSend.disabled = true;
+          quizBtnSend.style.filter = 'opacity(20%)';
+        }
+      }
+    });
   });
 
-  quizForm.addEventListener('submit', e => {
-    e.preventDefault();
-    quizForm.append(statusMessage);
-    statusMessage.textContent = loadMessage;
-    formData = new FormData(quizForm);
-    const body = {};
-    for (const val of formData) {
-      body[val[0]] = val[1];
+  document.addEventListener('change', e => {
+    const target = e.target;
+    if (target.matches('#rules')) {
+      if (target.checked) {
+        formBtn.forEach(item => {
+          item.disabled = false;
+          item.style.filter = 'opacity(100%)';
+        });
+        contactInputs.forEach(item => {
+          item.disabled = false;
+          item.style.filter = 'opacity(100%)';
+        });
+      } else {
+        formBtn.forEach(item => {
+          item.disabled = true;
+          item.style.filter = 'opacity(20%)';
+        });
+        contactInputs.forEach(item => {
+          item.disabled = true;
+          item.style.filter = 'opacity(20%)';
+        });
+      }
     }
+    if (target.matches('#quiz-rules')) {
+      if (target.checked) {
+        contactInputs.forEach(item => {
+          item.disabled = false;
+          item.style.filter = 'opacity(100%)';
+        });
+      } else {
+        quizBtnSend.disabled = true;
+        quizBtnSend.style.filter = 'opacity(20%)';
+        contactInputs.forEach(item => {
+          item.disabled = true;
+          item.style.filter = 'opacity(20%)';
+        });
+      }
+    }
+  });
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', e => {
+      e.preventDefault();
+      contactForm.append(statusMessage);
+      statusMessage.textContent = loadMessage;
+      formData = new FormData(contactForm);
+      const body = {};
+      for (const val of formData) {
+        body[val[0]] = val[1];
+      }
+    
+
+      postData(JSON.stringify(body))
+        .then(response => {
+          if (response.status !== 200) {
+            throw new Error('Status network not 200');
+          }
+          statusMessage.textContent = successMessage;
+        })
+        .catch(error => {
+          statusMessage.textContent = errorMessage;
+          console.error(error);
+        })
+        .then(() => {
+          contactInputs.forEach(item => {
+            item.value = '';
+            item.style.boxShadow = 'none'
+          })
+        })
+    });
+  }
+
+  if (quizForm) {
+    quizForm.addEventListener('submit', e => {
+      e.preventDefault();
+      quizForm.append(statusMessage);
+      statusMessage.textContent = loadMessage;
+      formData = new FormData(quizForm);
+      const body = {};
+      for (const val of formData) {
+        body[val[0]] = val[1];
+      }
     
 
     postData(JSON.stringify(body))
@@ -515,9 +643,18 @@ const sendForm = () => {
           });
           document.body.classList.remove('scroll-hidden');
           statusMessage.remove();
-        }, 3000);
+          checkboxQuizRules.checked = false;
+          quizBtnSend.disabled = true;
+          quizBtnSend.style.filter = 'opacity(20%)';
+          contactInputs.forEach(item => {
+            item.style.border = 'none';
+            item.disabled = true;
+            item.style.filter = 'opacity(20%)';
+          });
+        }, 5000);
       })
-  });
+    });
+  }
 };
 
 sendForm();
@@ -526,7 +663,7 @@ const showMask = () => {
   let element = document.querySelectorAll('.phone');
   element.forEach(item => {
     let maskOptions = {
-    mask: '+{7}(000)000-00-00'
+    mask: '+{7}(000)-000-00-00'
     };
     IMask(item, maskOptions);
   });
