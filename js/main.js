@@ -355,6 +355,8 @@ for(var i=0; i < 8; i++ ){
 
 })
 
+// AOS.init();
+
 const showModalWindow = () => {
   const productsSection = document.querySelector('.products-bfive');
   const useBone = document.querySelector('.use-bone');
@@ -703,4 +705,27 @@ const toggleCertificateImg = () => {
 
 toggleCertificateImg();
 
+const openSeoText = () => {
+  const seoSection = document.querySelector('.index-beight');
 
+  if (seoSection) {
+    const seoText = document.querySelector('.index-beight__text-wrapper');
+    const openBtn = document.querySelector('.open');
+    const closeBtn = document.querySelector('.close');
+    seoSection.addEventListener('click', e => {
+      const target = e.target;
+      if (target.matches('.open')) {
+        seoText.classList.add('index-beight__text-wrapper_active');
+        openBtn.classList.add('open-disable');
+        closeBtn.classList.add('close-active');
+      }
+      if (target.matches('.close')) {
+        seoText.classList.remove('index-beight__text-wrapper_active');
+        openBtn.classList.remove('open-disable');
+        closeBtn.classList.remove('close-active');
+      }
+    });
+  }
+};
+
+openSeoText();

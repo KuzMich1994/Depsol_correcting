@@ -1,45 +1,5 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Montserrat", sans-serif;
-  src: url("../fonts/montserrat/Montserrat-Light.woff2") format("woff2"), url("../fonts/montserrat/Montserrat-Light.woff") format("woff"), url("../fonts/montserrat/Montserrat-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat", sans-serif;
-  src: url("../fonts/montserrat/Montserrat-Regular.woff2") format("woff2"), url("../fonts/montserrat/Montserrat-Regular.woff") format("woff"), url("../fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat", sans-serif;
-  src: url("../fonts/montserrat/Montserrat-Medium.woff2") format("woff2"), url("../fonts/montserrat/Montserrat-Medium.woff") format("woff"), url("../fonts/montserrat/Montserrat-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat", sans-serif;
-  src: url("../fonts/montserrat/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/montserrat/Montserrat-SemiBold.woff") format("woff"), url("../fonts/montserrat/Montserrat-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat", sans-serif;
-  src: url("../fonts/montserrat/Montserrat-Bold.woff2") format("woff2"), url("../fonts/montserrat/Montserrat-Bold.woff") format("woff"), url("../fonts/montserrat/Montserrat-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Exo", sans-serif;
   src: url("../fonts/Exo/Exo-SemiBold.woff2") format("woff2"), url("../fonts/Exo/Exo-SemiBold.woff") format("woff"), url("../fonts/Exo/Exo-SemiBold.ttf") format("truetype");
   font-weight: 600;
@@ -982,6 +942,7 @@
 .index-beight {
   padding-top: 149px;
   padding-bottom: 25px;
+  overflow: hidden;
 }
 
 .index-beight__wrapper {
@@ -1103,9 +1064,40 @@
   color: #fff;
 }
 
+.index-beight__text-wrapper {
+  height: 132px;
+  overflow: hidden;
+  transition: all .5s ease;
+}
+
+.index-beight__text-wrapper_active {
+  height: 264px;
+}
+
+.open {
+  display: block;
+  margin: 0 auto;
+  margin-top: 29px;
+}
+
+.open-disable {
+  display: none !important;
+}
+
+.close {
+  display: none;
+  margin: 0 auto;
+  margin-top: 29px;
+}
+
+.close-active {
+  display: block !important;
+}
+
 .index-beight__text {
   max-width: 970px;
   width: 100%;
+  height: 132px;
   margin: 0 auto;
   margin-top: 13px;
   font-family: "Montserrat", sans-serif;
@@ -1115,6 +1107,7 @@
   line-height: 130.9%;
   color: #606060;
   text-align: left;
+  overflow: hidden;
 }
 
 .index-bthree__slider .slick-list.draggable {
@@ -1466,6 +1459,11 @@
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   font-family: "Montserrat", sans-serif;
   height: 100px;
   background: #ffffff;
@@ -2837,6 +2835,7 @@ button {
 }
 
 .main {
+  margin-top: 100px;
   background: #f4f4f4;
 }
 
@@ -3255,12 +3254,12 @@ button {
     transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
   }
   .header__menu-wrapper {
-    position: absolute;
+    position: fixed;
     transition: 0.3s;
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
-    top: -100%;
+    top: -110%;
     left: 0;
     max-width: 100%;
     margin: 0;
@@ -3268,12 +3267,17 @@ button {
     z-index: 100;
     background-color: #fff;
   }
+  .header__scroll-block {
+    overflow: auto;
+    padding-bottom: 50px;
+  }
   .logo__img {
     position: relative;
     z-index: 200;
   }
   .header__menu-wrapper.active {
     top: 100px;
+    bottom: 100px;
   }
   .header__menu-list,
   .header__polymer-list {
