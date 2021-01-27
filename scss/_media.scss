@@ -12,6 +12,9 @@
 }
 
 @media (max-width: 1300px) {
+  .container {
+    max-width: 92%;
+  }
   .products-bfive__wrapper {
     max-width: 900px;
     width: 100%;

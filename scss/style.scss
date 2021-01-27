@@ -142,10 +142,18 @@ a {
 }
 button {
   border: none;
+  outline: none;
+}
+input {
+  outline: none;
+}
+textarea {
+  outline: none;
 }
 .main {
   margin-top: 100px;
   background: #f4f4f4;
+  overflow: hidden;
 }
 .container {
   max-width: 1190px;

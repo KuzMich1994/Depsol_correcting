@@ -44,6 +44,29 @@
   font-weight: 300;
 }
 
+.popup__tel-error {
+  position: absolute;
+  top: 64px;
+  left: 280px;
+  max-width: 150px;
+  color: #DE172C;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+}
+.popup__fio-error {
+  position: absolute;
+  top: 4px;
+  left: 280px;
+  width: 150px;
+  color: #DE172C;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+}
+
 .error__value {
   color: #DE172C !important;
 }

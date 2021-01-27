@@ -71,6 +71,30 @@
   font-weight: 300;
 }
 
+.popup__tel-error {
+  position: absolute;
+  top: 64px;
+  left: 280px;
+  max-width: 150px;
+  color: #DE172C;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+}
+
+.popup__fio-error {
+  position: absolute;
+  top: 4px;
+  left: 280px;
+  width: 150px;
+  color: #DE172C;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+}
+
 .error__value {
   color: #DE172C !important;
 }
@@ -1065,7 +1089,7 @@
 }
 
 .index-beight__text-wrapper {
-  height: 132px;
+  height: 146px;
   overflow: hidden;
   transition: all .5s ease;
 }
@@ -1592,9 +1616,8 @@
 }
 
 .footer {
-  background-image: url(../images/bg.png);
+  background-image: url(../images/bg-1.png);
   background-repeat: no-repeat;
-  background-position-y: -40px;
 }
 
 .footer .container {
@@ -2184,7 +2207,7 @@
 
 .popup {
   display: none;
-  position: absolute;
+  position: fixed;
   min-height: 600px;
   left: 50%;
   top: 50%;
@@ -2832,11 +2855,21 @@ a {
 
 button {
   border: none;
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
+textarea {
+  outline: none;
 }
 
 .main {
   margin-top: 100px;
   background: #f4f4f4;
+  overflow: hidden;
 }
 
 .container {
@@ -3153,6 +3186,9 @@ button {
 }
 
 @media (max-width: 1300px) {
+  .container {
+    max-width: 92%;
+  }
   .products-bfive__wrapper {
     max-width: 900px;
     width: 100%;

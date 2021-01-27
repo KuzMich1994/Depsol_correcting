@@ -368,6 +368,7 @@ const showModalWindow = () => {
   const useBseven = document.querySelector('.use-bseven');
   const useBeight = document.querySelector('.use-beight');
   const useBnine = document.querySelector('.use-bnine');
+  const footerBtn = document.querySelector('.footer__btn');
 
   if (productsSection || useBone || useBtwo || useBthree || useBfour ||
     useBfive || useBsix || useBseven || useBeight || useBnine) {
@@ -430,6 +431,14 @@ const showModalWindow = () => {
       })
       .catch(error => console.error(error));
   }
+
+  footerBtn.addEventListener('click', () => {
+    const popup = document.querySelector('.popup');
+    const modalOverlay = document.querySelector('.quiz-mask');
+
+    popup.classList.add('block');
+    modalOverlay.classList.add('block');
+  });
 };
 
 showModalWindow();
@@ -437,6 +446,7 @@ showModalWindow();
 const sendForm = () => {
   const contactForm = document.getElementById('contact-form');
   const quizForm = document.getElementById('quiz-form');
+  const callbackForm = document.getElementById('callback-form');
   const contactInputs = document.querySelectorAll('[type="text"]');
   const quizTextarea = document.querySelectorAll('textarea');
   const errorMessage = 'Что-то пошло не так...';
@@ -444,24 +454,37 @@ const sendForm = () => {
   const successMessage = 'Спасибо! Мы скоро с вами свяжемся!';
   const statusMessage = document.createElement('div');
   const checkboxQuizRules = document.getElementById('quiz-rules');
+  const checkboxPopupRules = document.getElementById('popup-rules');
   const formBtn = document.querySelectorAll('.ctc-us__btn');
   const quizBtnSend = document.querySelector('.quiz__btn-send');
+  const popupBtnSend = document.getElementById('popup-send');
   const validatePhoneError = document.createElement('span');
   const validateNameError = document.createElement('span');
   const quizValidatePhoneError = document.createElement('span');
   const quizValidateNameError = document.createElement('span');
+  const popupValidatePhoneError = document.createElement('span');
+  const popupValidateNameError = document.createElement('span');
+  const telErrorText = 'Формат: +7(999)-999-99-99';
+  const nameErrorText = 'Не менее 2 символов кирилицы';
+  popupValidatePhoneError.classList.add('popup__tel-error');
+  popupValidateNameError.classList.add('popup__fio-error');
   quizValidatePhoneError.classList.add('quiz__tel-error')
   quizValidateNameError.classList.add('quiz__fio-error')
   validatePhoneError.classList.add('tel-error');
   validateNameError.classList.add('fio-error');
-  validatePhoneError.textContent = 'Формат: +7(999)-999-99-99';
-  validateNameError.textContent = 'Не менее 2 символов кирилицы';
-  quizValidatePhoneError.textContent = 'Формат: +7(999)-999-99-99';
-  quizValidateNameError.textContent = `Не менее 2 символов кирилицы`;
-  console.log(contactInputs[2]);
+  validatePhoneError.textContent = telErrorText;
+  validateNameError.textContent = nameErrorText;
+  quizValidatePhoneError.textContent = telErrorText;
+  quizValidateNameError.textContent = nameErrorText;
+  popupValidatePhoneError.textContent = telErrorText;
+  popupValidateNameError.textContent = nameErrorText;
+  console.log(contactInputs[0]);
+  console.log(contactInputs[1]);
 
   quizBtnSend.disabled = true;
   quizBtnSend.style.filter = 'opacity(20%)';
+  popupBtnSend.disabled = true;
+  popupBtnSend.style.filter = 'opacity(20%)';
 
   formBtn.forEach(item => {
     item.disabled = true;
@@ -508,9 +531,9 @@ const sendForm = () => {
     }
   };
 
-  if (contactInputs[3].value === '') {
-    quizBtnSend.disabled = true;
-  }
+  // if (contactInputs[3].value === '' || contactInputs[1].value === '') {
+  //   quizBtnSend.disabled = true;
+  // }
 
   contactInputs.forEach(item => {
     item.addEventListener('input', e => {
@@ -525,6 +548,13 @@ const sendForm = () => {
           quizBtnSend.style.filter = 'opacity(20%)';
         }
       }
+      if (currentTarget.matches('.popup__validate-phone')) {
+        validateInputs(currentTarget, /.7\([0-9]{3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}/, popupValidatePhoneError);
+        if (contactInputs[0].value === '') {
+          popupBtnSend.disabled = true;
+          popupBtnSend.style.filter = 'opacity(20%)';
+        }
+      }
       if (currentTarget.matches('.validate-name')) {
         validateInputs(currentTarget, /^[а-яА-Я]{2,}$/, validateNameError)
       }
@@ -533,6 +563,13 @@ const sendForm = () => {
         if (contactInputs[3].value === '') {
           quizBtnSend.disabled = true;
           quizBtnSend.style.filter = 'opacity(20%)';
+        }
+      }
+      if (currentTarget.matches('.popup__validate-name')) {
+        validateInputs(currentTarget, /^[а-яА-Я]{2,}$/, popupValidateNameError)
+        if (contactInputs[1].value === '') {
+          popupBtnSend.disabled = true;
+          popupBtnSend.style.filter = 'opacity(20%)';
         }
       }
     });
@@ -570,6 +607,21 @@ const sendForm = () => {
       } else {
         quizBtnSend.disabled = true;
         quizBtnSend.style.filter = 'opacity(20%)';
+        contactInputs.forEach(item => {
+          item.disabled = true;
+          item.style.filter = 'opacity(20%)';
+        });
+      }
+    }
+    if (target.matches('#popup-rules')) {
+      if (target.checked) {
+        contactInputs.forEach(item => {
+          item.disabled = false;
+          item.style.filter = 'opacity(100%)';
+        });
+      } else {
+        popupBtnSend.disabled = true;
+        popupBtnSend.style.filter = 'opacity(20%)';
         contactInputs.forEach(item => {
           item.disabled = true;
           item.style.filter = 'opacity(20%)';
@@ -655,10 +707,64 @@ const sendForm = () => {
           quizBtnSend.disabled = true;
           quizBtnSend.style.filter = 'opacity(20%)';
           contactInputs.forEach(item => {
-            item.style.border = 'none';
+            item.style.boxShadow = '0px 5px 8px rgba(0, 0, 0, 0.2)';
             item.disabled = true;
             item.style.filter = 'opacity(20%)';
           });
+        }, 5000);
+      })
+    });
+  }
+  if (callbackForm) {
+    callbackForm.addEventListener('submit', e => {
+      e.preventDefault();
+      quizForm.append(statusMessage);
+      statusMessage.textContent = loadMessage;
+      formData = new FormData(callbackForm);
+      const body = {};
+      for (const val of formData) {
+        body[val[0]] = val[1];
+      }
+    
+
+    postData(JSON.stringify(body))
+      .then(response => {
+        if (response.status !== 200) {
+          throw new Error('Status network not 200');
+        }
+        statusMessage.textContent = successMessage;
+      })
+      .catch(error => {
+        statusMessage.textContent = errorMessage;
+        console.error(error);
+      })
+      .then(() => {
+        contactInputs.forEach(item => {
+          item.value = '';
+        })
+        setTimeout(() => {
+          const popup = document.querySelector('.popup');
+          const popup2 = document.querySelector('.block-two');
+          const quizMask = document.querySelectorAll('.quiz-mask');
+          popup.classList.remove('block');
+          popup2.classList.remove('block');
+          quizMask.forEach(item => {
+            item.classList.remove('block');
+          });
+          document.body.classList.remove('scroll-hidden');
+          statusMessage.remove();
+          checkboxPopupRules.checked = false;
+          popupBtnSend.disabled = true;
+          popupBtnSend.style.filter = 'opacity(20%)';
+          contactInputs.forEach(item => {
+            item.style.boxShadow = '0px 5px 8px rgba(0, 0, 0, 0.2)';
+            item.disabled = true;
+            item.style.filter = 'opacity(20%)';
+          });
+          formBtn.forEach(item => {
+            item.disabled = true;
+            item.style.filter = 'opacity(20%)';
+          })
         }, 5000);
       })
     });
