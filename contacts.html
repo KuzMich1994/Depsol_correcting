@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Применение</title>
+		<title>Применение</title>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -148,42 +149,57 @@
 		</div>
 	</header>
     <main class="main">
-        <section class="contacts-bone">
-            <h1 class="contacts__main-title">Контакты</h1>
-            <div class="contacts-bone__map">
-                <div class="conainer">
-                    <div class="contacts-bone__wrapper">
-                        <div class="contacts-bone__card adress">
-                            <span class="contacts-bone__card-title">Адрес:</span>
-                            <span class="contacts-bone__card-text">г. Москва, Дмитровское шоссе, 60 А</span>
-                        </div>
-                        <div class="contacts-bone__card">
-                            <span class="contacts-bone__card-title">Телефоны:</span>
-                            <a class="contacts-bone__card-text" href="tel:+71234567890">+7 (123) 456-78-90</a>
-                            <a class="contacts-bone__card-text" href="tel:+71234567890">+7 (123) 456-78-90</a>
-                        </div>
-                        <div class="contacts-bone__card email">
-                            <span class="contacts-bone__card-title">Почта:</span>
-                            <a class="contacts-bone__card-text" href="mailto:info@depsol.ru">info@depsol.ru</a>
-                        </div>
-                        <div class="contacts-bone__card hours">
-                            <span class="contacts-bone__card-title">Часы работы:</span>
-                            <span class="contacts-bone__card-text">Пн-вс 09:00 - 21:00</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <ul class="contacts-bone__list">
-                    <li class="contacts-bone__item-title">ООО "ДЕПСОЛ"</li>
-                    <li class="contacts-bone__item">ИНН 455454545</li>
-                    <li class="contacts-bone__item">КПП 4545454545</li>
-                    <li class="contacts-bone__item">ОГРН 454565765877980908</li>
-                    <li class="contacts-bone__item">р/сч 40701810954645767868970003 в Филиале № 6318
-                        Банка ВТБ (ПАО) г. Москва</li>
-                    <li class="contacts-bone__item">БИК 043601968</li>
-                    <li class="contacts-bone__item">кор/сч 3010182441042206701968</li>
-                </ul>
+			<section class="contacts-bone">
+				<div class="container">
+					<h1 class="contacts__main-title">Контакты</h1>
+						<div class="contacts-bone__wrapper">
+							<div class="contacts-bone__card">
+											<img class="contacts-bone__icon" src="images/map-1.svg" alt="Адрес">
+											<div class="contacts-bone__card-wrapper">
+												<span class="contacts-bone__card-title">Адрес:</span>
+												<span class="contacts-bone__card-text">г. Москва, Дмитровское шоссе, 60 А</span>
+											</div>
+										</div>
+										<div class="contacts-bone__card">
+											<img class="contacts-bone__icon contacts-bone__icon_margin-bottom" src="images/phone.svg" alt="Телефоны">
+											<div class="contacts-bone__card-wrapper">
+												<span class="contacts-bone__card-title">Телефоны:</span>
+												<a class="contacts-bone__card-text contacts-bone__card-text_margin-bottom" href="tel:+71234567890">+7 (123) 456-78-90</a>
+												<a class="contacts-bone__card-text" href="tel:+71234567890">+7 (123) 456-78-90</a>
+											</div>
+										</div>
+										<div class="contacts-bone__card">
+											<img class="contacts-bone__icon" src="images/mail.svg" alt="Почта">
+											<div class="contacts-bone__card-wrapper">
+												<span class="contacts-bone__card-title">Почта:</span>
+												<a class="contacts-bone__card-text" href="mailto:info@depsol.ru">info@depsol.ru</a>
+											</div>
+										</div>
+										<div class="contacts-bone__card">
+											<img class="contacts-bone__icon" src="images/hours.svg" alt="Часы работы">
+											<div class="contacts-bone__card-wrapper">
+												<span class="contacts-bone__card-title">Часы работы:</span>
+												<span class="contacts-bone__card-text">Пн-вс 09:00 - 21:00</span>
+											</div>
+										</div>
+									</div>
+							</div>
+							<iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A4ea0cd12c22f9e059550117c401102df421c0fb31c22e598d2d38e94324593ac&amp;source=constructor" width="500" height="386" frameborder="0"></iframe>
+							<iframe class="map-mobile" src="https://yandex.ru/map-widget/v1/?um=constructor%3A4ea0cd12c22f9e059550117c401102df421c0fb31c22e598d2d38e94324593ac&amp;source=constructor" width="500" height="386" frameborder="0"></iframe>
+						<div class="container">
+	            <div class="contacts-bone__requisites">
+								<img src="images/requisites.svg" alt="Реквизиты" class="contacts-bone__requisites-icon">
+	            	<ul class="contacts-bone__requisites-list">
+		                    <li class="contacts-bone__requisites-item contacts-bone__requisites-item_first">ООО "ДЕПСОЛ"</li>
+		                    <li class="contacts-bone__requisites-item">ИНН 455454545</li>
+		                    <li class="contacts-bone__requisites-item">КПП 4545454545</li>
+		                    <li class="contacts-bone__requisites-item">ОГРН 454565765877980908</li>
+		                    <li class="contacts-bone__requisites-item">р/сч 40701810954645767868970003 в Филиале № 6318
+		                        Банка ВТБ (ПАО) г. Москва</li>
+		                    <li class="contacts-bone__requisites-item">БИК 043601968</li>
+		                    <li class="contacts-bone__requisites-item">кор/сч 3010182441042206701968</li>
+		                </ul>
+	            </div>
             </div>
         </section>
         <section class="contacts-btwo">
@@ -198,7 +214,7 @@
 							form="contact-form" pattern=".7\([0-9]{3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
 						<input class="ctc-us__btn" type="submit" value="Отправить" form="contact-form"">
 						<input class=" ctc-us__checkbox" id="rules" name="rules" type="checkbox" form="contact-form">
-						<label class="ctc-us__label" for="rules" form="contact-form">Даю согласие на <a
+						<label class="ctc-us__label ctc-us__label_white" for="rules" form="contact-form">Даю согласие на <a
 								href="#">обработку персональных
 								данных.</a></label>
 					</form>
