@@ -2063,7 +2063,6 @@
 
 .products-bfour__wrapper {
   display: flex;
-  justify-content: space-between;
 }
 
 .products-bfour__card {
@@ -2073,6 +2072,7 @@
 
 .products-bfour__card + .products-bfour__card {
   align-self: flex-end;
+  margin-left: 30px;
 }
 
 .products-bfour__img {
@@ -3467,6 +3467,17 @@ textarea {
     grid-template-columns: 350px 350px 350px;
     gap: 30px;
   }
+  .products-bfour__img {
+    width: 370px;
+  }
+  .pproducts-bfour__text.left {
+    text-align: center;
+    padding-right: 0;
+    padding-left: 50px;
+  }
+  .pproducts-bfour__text {
+    padding-left: 140px;
+  }
 }
 
 @media (max-width: 1150px) {
@@ -3581,38 +3592,9 @@ textarea {
     padding-left: 15px;
     padding-right: 15px;
   }
-  .products-bfour__card-inn,
-  .products-bfour__card-inn.right {
-    max-width: 100%;
-    margin: 0;
-  }
-  .products-bfour__img {
-    max-width: 470px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .pproducts-bfour__text.left,
-  .pproducts-bfour__text {
-    text-align: center;
-    padding: 0;
-    margin: 30px 0;
-  }
-  .products-bfour__card {
-    max-width: 100%;
-  }
-  .products-bfour__wrapper {
-    flex-direction: column;
-  }
   .products-btwo {
     padding-left: 15px;
     padding-right: 15px;
-  }
-  .use__content {
-    max-width: 100%;
-    width: 100%;
-  }
-  .use__content {
-    padding-bottom: 30px;
   }
   .about-bsix__list {
     max-width: 90%;
@@ -3628,22 +3610,27 @@ textarea {
   .about-bsix__item + .about-bsix__item {
     margin: 0 auto;
   }
-  .use__wrapper {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  .use__content {
-    position: unset;
-  }
-  .use__img {
-    width: 100%;
-    height: auto;
-  }
   .contacts-bone__wrapper {
     padding-right: 30px;
     padding-left: 20px;
     left: 80px;
+  }
+  .use__content {
+    padding-right: 30px;
+    padding-left: 50px;
+    max-width: 475px;
+  }
+  .use__list-title {
+    margin-bottom: 18px !important;
+    font-size: 30px;
+    line-height: 34px;
+  }
+  .use__item {
+    font-size: 15px;
+    margin-top: 19px !important;
+  }
+  .use__item:first-child {
+    margin-top: 0 !important;
   }
 }
 
@@ -4076,7 +4063,7 @@ textarea {
     font-size: 25px;
     line-height: 30px;
   }
-  .pproducts-bfour__text {
+  .products-bfour__text {
     font-size: 16px;
     line-height: 20px;
   }
@@ -4466,6 +4453,47 @@ textarea {
     width: 100%;
     display: block;
     height: 350px;
+  }
+  .products-bfour__card-inn,
+  .products-bfour__card-inn.right {
+    max-width: 100%;
+    margin: 0;
+  }
+  .products-bfour__img {
+    max-width: 470px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .pproducts-bfour__text.left,
+  .pproducts-bfour__text {
+    text-align: center;
+    padding: 0;
+    margin: 30px 0;
+  }
+  .products-bfour__card {
+    max-width: 100%;
+  }
+  .products-bfour__wrapper {
+    flex-direction: column;
+  }
+  .use__content {
+    max-width: 100%;
+    width: 100%;
+  }
+  .use__content {
+    padding-bottom: 30px;
+  }
+  .use__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .use__content {
+    position: unset;
+  }
+  .use__img {
+    width: 100%;
+    height: auto;
   }
 }
 

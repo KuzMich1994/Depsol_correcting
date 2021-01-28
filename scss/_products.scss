@@ -256,7 +256,7 @@
 }
 .products-bfour__wrapper {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 .products-bfour__card {
   max-width: 945px;
@@ -264,6 +264,7 @@
 }
 .products-bfour__card + .products-bfour__card {
   align-self: flex-end;
+  margin-left: 30px;
 }
 .products-bfour__img {
   display: flex;
