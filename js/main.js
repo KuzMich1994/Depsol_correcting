@@ -331,9 +331,9 @@ var imgBlock = document.querySelector('.index-bfive__img');
 if( imgBlock != null){
 var imgBlockGetSize = window.getComputedStyle(imgBlock);
 var  blockForAssign = document.querySelectorAll(".index-bfive__content");
-for(var i=0; i < 3; i++ ){
-  blockForAssign[i].style.height = imgBlockGetSize.getPropertyValue('height');
-}
+// for(var i=0; i < 3; i++ ){
+//   blockForAssign[i].style.height = imgBlockGetSize.getPropertyValue('height');
+// }
 }
 var screenSize = screen.width;
 
