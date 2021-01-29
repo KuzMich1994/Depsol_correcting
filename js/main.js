@@ -64,9 +64,12 @@ $(document).ready(function(){
         breakpoint: 1024,
 	      settings: {
 	        slidesToShow: 4,
-	      }
+	      },
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
 	    },
-
     ]
   });
   $('.use__slider').slick({
@@ -369,11 +372,12 @@ const showModalWindow = () => {
   const useBeight = document.querySelector('.use-beight');
   const useBnine = document.querySelector('.use-bnine');
   const footerBtn = document.querySelector('.footer__btn');
+  const modalOverlay = document.querySelector('.quiz-mask');
+  const popupInfo = document.querySelector('.popup-info');
+  const popupInfoBtn = document.querySelectorAll('.popup-info__btn');
 
   if (productsSection || useBone || useBtwo || useBthree || useBfour ||
     useBfive || useBsix || useBseven || useBeight || useBnine) {
-    const modalOverlay = document.querySelector('.quiz-mask');
-    const popupInfo = document.querySelector('.popup-info');
     const popupTable = document.querySelector('.popup-info__table');
     const tableItem = popupTable.querySelectorAll('tr>td');
     const allCards = document.querySelectorAll('.products-bfive__card-link');
@@ -432,12 +436,28 @@ const showModalWindow = () => {
       .catch(error => console.error(error));
   }
 
-  footerBtn.addEventListener('click', () => {
+  const showFooterPopup = () => {
     const popup = document.querySelector('.popup');
+    const popupOne = document.querySelector('.block-one');
     const modalOverlay = document.querySelector('.quiz-mask');
 
     popup.classList.add('block');
     modalOverlay.classList.add('block');
+    popupOne.classList.add('block')
+  };
+
+  footerBtn.addEventListener('click', () => {
+    showFooterPopup();
+  });
+
+  const closePopupInfo = () => {
+    popupInfo.classList.remove('block');
+  };
+  popupInfoBtn.forEach(item => {
+    item.addEventListener('click', () => {
+      closePopupInfo();
+      showFooterPopup();
+    });
   });
 };
 
@@ -478,8 +498,6 @@ const sendForm = () => {
   quizValidateNameError.textContent = nameErrorText;
   popupValidatePhoneError.textContent = telErrorText;
   popupValidateNameError.textContent = nameErrorText;
-  console.log(contactInputs[0]);
-  console.log(contactInputs[1]);
 
   quizBtnSend.disabled = true;
   quizBtnSend.style.filter = 'opacity(20%)';

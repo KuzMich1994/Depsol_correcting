@@ -1137,7 +1137,7 @@
   }
 
   .header__menu-wrapper.active {
-    top: 100px;
+    top: 50px;
     bottom: 100px;
   }
 
@@ -1239,6 +1239,13 @@
   }
 
   .index {
+    &-bone {
+      &__phone {
+        &-wrapper {
+          display: flex;
+        }
+      }
+    }
     &-bfive {
 
       &__row-1,
@@ -1322,6 +1329,11 @@
     width: 100%;
     display: block;
     height: 350px;
+  }
+
+  .products-bone__list {
+    margin-left: 0;
+    margin-bottom: 30px;
   }
 
   .products-bfour__card-inn,

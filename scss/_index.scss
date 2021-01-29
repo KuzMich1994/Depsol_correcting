@@ -615,4 +615,37 @@
   height: 475px;
 }
 
+
+.index-bone {
+  &__phone {
+    margin-bottom: 62px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    color: #fff;
+    &-wrapper {
+      display: none;
+      flex-direction: column;
+    }
+  }
+  &__btn {
+    padding: 12px 8px 16px 9px;
+    font-family: "Exo 2",
+    sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 22px;
+    color: #ffffff;
+    background: #de172c;
+    border-radius: 3px;
+    margin-top: 2px;
+    transition: .3s;
+    cursor: pointer;
+  }
+}
 // INDEX PAGE END
+
+

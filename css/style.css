@@ -1140,6 +1140,36 @@
   height: 475px;
 }
 
+.index-bone__phone {
+  margin-bottom: 62px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  color: #fff;
+}
+
+.index-bone__phone-wrapper {
+  display: none;
+  flex-direction: column;
+}
+
+.index-bone__btn {
+  padding: 12px 8px 16px 9px;
+  font-family: "Exo 2", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 22px;
+  color: #ffffff;
+  background: #de172c;
+  border-radius: 3px;
+  margin-top: 2px;
+  transition: .3s;
+  cursor: pointer;
+}
+
 .about-bone {
   display: flex;
   align-items: center;
@@ -2850,6 +2880,7 @@
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .modal-img__wrapper {
@@ -4308,7 +4339,7 @@ textarea {
     z-index: 200;
   }
   .header__menu-wrapper.active {
-    top: 100px;
+    top: 50px;
     bottom: 100px;
   }
   .header__menu-list,
@@ -4395,6 +4426,9 @@ textarea {
     border-radius: 5px;
     transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
   }
+  .index-bone__phone-wrapper {
+    display: flex;
+  }
   .index-bfive__row-1, .index-bfive__row-2, .index-bfive__row-3 {
     flex-direction: column;
   }
@@ -4453,6 +4487,10 @@ textarea {
     width: 100%;
     display: block;
     height: 350px;
+  }
+  .products-bone__list {
+    margin-left: 0;
+    margin-bottom: 30px;
   }
   .products-bfour__card-inn,
   .products-bfour__card-inn.right {
